@@ -37,7 +37,7 @@ app.post('/api/courses', (req, res) => {
     const result = validateCourse(req.body);
 
     if (result.error) {
-       return res.status(404).send(result.error.details[0].message);
+        return res.status(404).send(result.error.details[0].message);
     }
 
     const course = {
